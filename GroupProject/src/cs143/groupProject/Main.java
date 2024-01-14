@@ -1,70 +1,109 @@
 package cs143.groupProject;
+import java.util.*;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//1/14/23
+		//Jessica Henry
+		//CS 143
+		
+		Scanner scnr = new Scanner(System.in);
+		
+		ArrayList<Person> people = new ArrayList<Person>();
+		
+		
+		do {
+
+			System.out.println("Please type if you would like to add...");
+			System.out.println("Intructor , Student, or a Person" );
+			System.out.println("If you would like to quit then type quit");
+			
+			String input = scnr.next();
+
+			//Hunter Lindhorst 1/14/2024
 
 
+			//Code for main
 
 
-
-		//Hunter Lindhorst 1/14/2024
-
-
-//Code for main
+			//Prior to this if statement prompt for class type
+			 
+			if(input.equals("Intructor") == true) {
 
 
-//Prior to this if statement prompt for class type
+				 //Create New Instructor Object
 
 
-if(input.equals("Intructor") == true)
+				 Instructor newInstructor = new Instructor();
 
 
-{
+				 //Get Instructor Name
 
 
- //Create New Instructor Object
+				 System.out.println("Instructor Name: ");
 
 
- Instructor newInstructor = new Instructor();
+				 newInstructor.setInstructorName(scnr.next);
 
 
- //Get Instructor Name
+				 //Get Instructor Number
 
 
- System.out.println("Instructor Name: ");
+				 System.out.println("Instructor Number: ");
 
 
- newIntructor.setInstructorName(scnr.next);
+				 newInstructor.setInstructorIdNum(scnr.next);
 
 
- //Get Instructor Number
+				 //Get Instructor Salary
 
 
- System.out.println("Instructor Number: ");
+				 System.out.println("Instructor Salary: ");
 
 
- newInstructor.setInstructorIdNum(scnr.next);
+				 newInstructor.setInstructorSalary(scnr.next);
 
 
- //Get Instructor Salary
+				 //Add instructor to array schoolRecord
 
 
- System.out.println("Instructor Salary: ");
+				 people.add(newInstructor);
 
 
- newInstructor.setInstructorSalary(scnr.next);
+				}
+			//Jessica Henry 
+			//CS 143
+			//1/14/23
+			
+			else if(input.equals("Student") == true) {
 
+				Student s = new Student();
+				
+				Grad g = new Grad();
+				
+				UnderGrad u = new UnderGrad();
+			}
+			
+			else if(input.equals("Person") == true) {
 
- //Add instructor to array schoolRecord
+				System.out.println("What is the name of the person?");
+				String name = scnr.next();
+				Person p = new Person(name);
+				//This will get the name of the person and call person
+			}
+			
+			else if(input.equals("Print")== true) {
+				for (Person arr : people) {
 
-
- schoolRecord.add(newInstructor);
-
-
-}
-
+					 arr.printInfo();
+					 }
+			}//This should print off the arraylist
+			
+			
+		}while(input.equals("quit") == false);
+		 
 	}
 
 }
