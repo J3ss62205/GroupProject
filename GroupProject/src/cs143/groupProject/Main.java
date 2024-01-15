@@ -87,32 +87,48 @@ public class Main {
 			//1/14/23
 			
 			else if(input.equals("Student") == true) {
+			//Jonathan Lee
+			//CS 143
+			//1/14/23				
+				System.out.println("What is the type of student? (Grad or UnderGrad)")
+				String studentType = scnr.next();
 
-				Student s = new Student();
+				if (studentType.equals("Grad")){
+					Grad g = new Grad();
+					System.out.println("What is the name of the student?");
+					String name = scnr.next();
+					g.setName(name);
+
+					System.out.println("What is the students ID?");
+					String major = scnr.next();
+					g.setNumber(id);
+
+					System.out.println("What is the student's degree?");
+					String degree = scnr.next();
+					g.setDegree(degree);
+
+					people.add(g);
+
+				} else if (studentType.equals("UnderGrad")){
+					UnderGrad u = new UnderGrad();
+					System.out.println("What is the name of the student?");
+					String name = scnr.next();
+					u.setName(name);
+
+					System.out.println("What is the students ID?");
+					String major = scnr.next();
+					u.setNumber(id);
+
+					System.out.println("What is the student's degree?");
+					String degree = scnr.next();
+					u.setDegree(degree);
+
+					people.add(u);
+				} else {
+					System.out.println("Invalid entry. Please write 'Grad' or 'UnderGrad'." );
 				
-				Grad g = new Grad();
-				
-				UnderGrad u = new UnderGrad();
 				
 				
-				//*********************************************
-				//JONATHAN FIX THIS PLEASE
-				
-				System.out.println("What is the name of the student?");
-				String name = scnr.next();
-				Student.setName(name);
-				
-				System.out.println("What is the students major");
-				String major = scnr.next();
-				Student.setMajor(major);
-				
-				System.out.println("What is the students ID");
-				int id = scnr.nextInt();
-				Student.setNumber(id);
-				
-				//********************************************
-				
-				people.add(s);
 			}
 			//Jessica Henry 
 			//CS 143
