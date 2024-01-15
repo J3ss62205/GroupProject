@@ -13,14 +13,18 @@ public class Main {
 		
 		ArrayList<Person> people = new ArrayList<Person>();
 		
+		String input;
+		
 		
 		do {
 
 			System.out.println("Please type if you would like to add...");
-			System.out.println("Intructor , Student, or a Person" );
-			System.out.println("If you would like to quit then type quit");
+			System.out.println("Instructor , Student, or a Person" );
+			System.out.println("If you would like to print the people then type Print");
+			System.out.println("If you would like to quit then type Quit");
+			System.out.println("-----------------------");
 			
-			String input = scnr.next();
+			input = scnr.next();
 
 			//Hunter Lindhorst 1/14/2024
 
@@ -43,27 +47,32 @@ public class Main {
 
 
 				 System.out.println("Instructor Name: ");
+				 
+				 String name = scnr.next();
 
-
-				 newInstructor.setInstructorName(scnr.next);
+				 newInstructor.setInstructorName(name);
 
 
 				 //Get Instructor Number
 
 
 				 System.out.println("Instructor Number: ");
+				 
+				 int num = scnr.nextInt();
 
 
-				 newInstructor.setInstructorIdNum(scnr.next);
+				 newInstructor.setInstuctorIdNum(num);
 
 
 				 //Get Instructor Salary
 
 
 				 System.out.println("Instructor Salary: ");
+				 
+				 int salary = scnr.nextInt();
 
 
-				 newInstructor.setInstructorSalary(scnr.next);
+				 newInstructor.setInstuctorSalary(salary);
 
 
 				 //Add instructor to array schoolRecord
@@ -84,6 +93,13 @@ public class Main {
 				Grad g = new Grad();
 				
 				UnderGrad u = new UnderGrad();
+				
+//				System.out.println("What is the name of the student?");
+//				String name = scnr.next();
+//				Student.setName(name);
+				//Don't know why it is not working
+				
+				people.add(s);
 			}
 			
 			else if(input.equals("Person") == true) {
@@ -92,6 +108,8 @@ public class Main {
 				String name = scnr.next();
 				Person p = new Person(name);
 				//This will get the name of the person and call person
+				
+				people.add(p);
 			}
 			
 			else if(input.equals("Print")== true) {
@@ -102,7 +120,7 @@ public class Main {
 			}//This should print off the arraylist
 			
 			
-		}while(input.equals("quit") == false);
+		}while(input.equals("Quit") == false);
 		 
 	}
 
