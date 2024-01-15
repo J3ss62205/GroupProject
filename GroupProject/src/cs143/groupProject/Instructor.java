@@ -14,7 +14,7 @@ package cs143.groupProject;
  */
 
 
-public class Teacher extends Person
+public class Instructor extends Person
 
 
 {
@@ -155,9 +155,6 @@ public class Teacher extends Person
  }
 
 
-}
-
-
  
 
 
@@ -174,6 +171,7 @@ public void printInfo()
 
 
 {
+System.out.println("-----------------------");
 
 
  System.out.println("Name: " + instructorName);
