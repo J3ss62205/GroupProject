@@ -94,13 +94,29 @@ public class Main {
 				
 				UnderGrad u = new UnderGrad();
 				
-//				System.out.println("What is the name of the student?");
-//				String name = scnr.next();
-//				Student.setName(name);
-				//Don't know why it is not working
+				
+				//*********************************************
+				//JONATHAN FIX THIS PLEASE
+				
+				System.out.println("What is the name of the student?");
+				String name = scnr.next();
+				Student.setName(name);
+				
+				System.out.println("What is the students major");
+				String major = scnr.next();
+				Student.setMajor(major);
+				
+				System.out.println("What is the students ID");
+				int id = scnr.nextInt();
+				Student.setNumber(id);
+				
+				//********************************************
 				
 				people.add(s);
 			}
+			//Jessica Henry 
+			//CS 143
+			//1/14/23
 			
 			else if(input.equals("Person") == true) {
 
